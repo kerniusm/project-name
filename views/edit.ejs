@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Homepage</title>
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+    <body>
+        <form action="/update/<%= id %>" method="POST" >
+            <input type="text" name="title" placeholder="recepto pavadinimas" value="<%=recepte.title%>"> <br>
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Reikalingi indigriantai"><%=recepte.description%></textarea> <br>
+            <button type="submit">Atnaujinti</button>
+            <a href="/delete/<%= id %>">Istrinti</a>
+        </form>
+
+    </body>
+</html>

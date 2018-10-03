@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Homepage</title>
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+    <body>
+        <%- include('partials/navbar') %> 
+        <% if(receptes.length > 0) { %>
+            <% for(let i = 0; i < receptes.length; i++){ %> 
+                
+                <a href="/edit/<%= i %>"><%= receptes[i].title %></a>
+                
+            <% } %>
+        <% }else{ %>
+            <p>Receptu nera <a href="/new"> + Prideti nauja</a></p>
+        <% } %>
+
+    </body>
+</html>

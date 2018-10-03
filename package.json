@@ -1,0 +1,23 @@
+{
+  "name": "project2",
+  "version": "1.0.1",
+  "description": "project apie express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "js",
+    "tagai",
+    "kurie",
+    "apibudina",
+    "projekta"
+  ],
+  "author": "Kernius",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
