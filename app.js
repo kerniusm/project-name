@@ -27,6 +27,9 @@ app.get("/new", (req, res) => {
     res.render('new');
 });
 
+
+console.log('hello world!')
+
 app.post("/save",urlencodedParser, (req, res) => {
    let receptes = [];
     if(fs.existsSync('./public/receptai.txt')){
@@ -46,16 +49,6 @@ app.get('/edit/:id?', (req,res) =>{
     res.render('edit', {id: req.params.id, recepte: receptes[req.params.id]});
 })
 
-app.post('/update/:id',urlencodedParser, (req,res) =>{
-   let receptes = [];
-   if(fs.existsSync('./public/receptai.txt')){
-       receptes = fs.readFileSync('./public/receptai.txt', 'utf8');
-       receptes = JSON.parse(receptes);
-       receptes[req.params.id] = req.body;
-       fs.writeFileSync('./public/receptai.txt', JSON.stringify(receptes));
-    } 
-    res.redirect('/');
-});
 
 app.delete('delete/:id', (req, res)=>{
     let receptes = [];
